@@ -41,6 +41,7 @@
     <resources>
       <resource>
         <directory>${project.basedir}/src/main/resources</directory>
+        <directory>${project.basedir}/TextClient/lib</directory>
       </resource>
     </resources>
     <testResources>
