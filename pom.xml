@@ -129,7 +129,7 @@
   <dependency>
     <groupId>sip</groupId>
     <artifactId>softphone</artifactId>
-    <version>${softphone.version}</version>
+    <version>1.0</version>
   </dependency>
  </dependencies>
 </project>
