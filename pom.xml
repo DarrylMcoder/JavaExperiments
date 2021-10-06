@@ -40,7 +40,6 @@
     <testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
     <resources>
       <resource>
-        <directory>${project.basedir}/src/main/resources</directory>
         <directory>${project.basedir}/TextClient/lib</directory>
       </resource>
     </resources>
