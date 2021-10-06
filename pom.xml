@@ -125,5 +125,9 @@
       </build>
     </profile>
   </profiles>
- 
+  <dependency>
+      <groupId>sip</groupId>
+      <artifactId>softphone</artifactId>
+      <version>${softphone.version}</version>
+    </dependency>
 </project>
