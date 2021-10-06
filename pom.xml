@@ -1,6 +1,8 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
- 
+  <artifactId>java-experiments</artifactId>
+  <version>1.0</version>
+  <groupId>1.0</groupId>
   <repositories>
     <repository>
       <id>central</id>
