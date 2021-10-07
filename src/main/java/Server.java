@@ -57,6 +57,8 @@ public class Server
   
     public static void main(String args[])
     {
-        Server server = new Server(System.getenv("PORT"));
+		
+	    int port = Integer.parseInt(System.getenv("PORT"));
+        Server server = new Server(port);
     }
 }
