@@ -1,0 +1,2 @@
+Main-Class: dev2dev.textclient.TextClient;
+Class-Path: target/classes;
