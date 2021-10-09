@@ -15,14 +15,20 @@ public class Client{
 		    this.out = new DataOutputStream(socket.getOutputStream());
 		    this.in = new DataInputStream(socket.getInputStream());
 		    String name = gui.askUser("Please enter your name. This is the name other users will see when you send a message.");
-		    while(true){
-			    String msg = gui.askUser();
+			String msg = "";
+			String msgIn = "";
+		    do{
+			    msg = gui.askUser();
 			    out.writeUTF(name + ": " + msg);
-			    msg = in.readUTF();
-			    gui.tellUser(msg);
-		    }
+			   try{
+			   	  msgIn = in.readUTF();
+			   }catch(EOFException e){
+			   	continue;
+			   }
+			    gui.tellUser(msgIn);
+		    }while(!msg.equals("Done"));
 		}catch(Exception e){
-			System.out.println(e);
+			e.printStackTrace();
 		}
 	
 	}
@@ -44,15 +50,19 @@ class Gui{
 	}
 
 	public void tellUser(String msg){
-		System.out.println(msg);
+		System.out.println("Message: " + msg);
 	}
 	
 	public String askUser(String msg){
 		tellUser(msg);
-		return in.nextLine();
+		String input = in.nextLine();
+		System.out.println(input);
+		return input;
 	}
 	
 	public String askUser(){
-		return in.nextLine();
+	    String input = in.nextLine();
+	    System.out.println(input);
+		return input;
 	}
 }
